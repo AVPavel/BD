@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import org.kordamp.bootstrapfx.scene.layout.Panel?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            xmlns:bootstrapfx="http://javafx.com/javafx"
+            fx:controller="com.example.oms3.controller.RegisterController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Panel text="Register" styleClass="panel-success" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <VBox alignment="CENTER" spacing="5">
+            <padding>
+                <Insets top="5" right="10" bottom="5" left="5"/>
+            </padding>
+
+            <Panel text="Username" styleClass="form-control"/>
+            <TextField fx:id="usernameField" promptText="Username" maxWidth="200" styleClass="form-control"/>
+
+            <Panel text="Password" styleClass="form-control"/>
+            <PasswordField fx:id="passwordField" promptText="Password" maxWidth="200" styleClass="form-control"/>
+
+            <Panel text="Email" styleClass="form-control"/>
+            <TextField fx:id="emailField" promptText="Email" maxWidth="200" styleClass="form-control"/>
+
+            <Panel text="First Name" styleClass="form-control"/>
+            <TextField fx:id="firstNameField" promptText="First Name" maxWidth="200" styleClass="form-control"/>
+
+            <Panel text="Last Name" styleClass="form-control"/>
+            <TextField fx:id="lastNameField" promptText="Last Name" maxWidth="200" styleClass="form-control"/>
+
+            <Panel text="Phone" styleClass="form-control"/>
+            <TextField fx:id="phoneField" promptText="Phone" maxWidth="200" styleClass="form-control"/>
+
+            <Panel text="Address" styleClass="form-control"/>
+            <TextField fx:id="addressField" promptText="Address" maxWidth="200" styleClass="form-control"/>
+
+            <HBox>
+                <Button fx:id="registerButton" text="Register" onAction="#onRegisterButtonClick" styleClass="btn-secondary"></Button>
+            </HBox>
+
+        </VBox>
+    </Panel>
+</AnchorPane>
+

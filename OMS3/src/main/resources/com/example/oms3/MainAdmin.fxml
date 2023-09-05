@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.oms3.controller.MainAdminController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Menu Bar for quick operations -->
+    <MenuBar AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.leftAnchor="0.0">
+        <Menu text="File">
+            <MenuItem text="Add Product" fx:id="addProductMenuItem" onAction="#AddProduct"/>
+            <MenuItem text="Delete Product" fx:id="deleteProductMenuItem" onAction="#DeleteProduct"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="Exit" onAction="#Exit"/>
+        </Menu>
+        <Menu text="View">
+            <MenuItem text="List of Products" fx:id="listProductsMenuItem" onAction="#ListProducts"/>
+            <MenuItem text="Orders" fx:id="viewOrdersMenuItem" onAction="#ViewOrders"/>
+        </Menu>
+    </MenuBar>
+
+
+    <VBox AnchorPane.topAnchor="30.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" spacing="10">
+
+        <TableView fx:id="userTable" prefHeight="300.0" prefWidth="550.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nameColumn" text="Name"/>
+                <TableColumn fx:id="categoryColumn" text="Category"/>
+                <TableColumn fx:id="brandColumn" text="Brand"/>
+                <TableColumn fx:id="supplierColumn" text="Supplier"/>
+                <TableColumn fx:id="priceColumn" text="Price"/>
+                <TableColumn fx:id="descriptionColumn" text="Description"/>
+                <TableColumn fx:id="stockColumn" text="Stock"/>
+            </columns>
+        </TableView>
+
+
+
+        <HBox spacing="10">
+            <Button text="Sold " fx:id="soldButton"/>
+            <Button text="Clear Table" fx:id="clearTableButton" onAction="#ClearTable"/>
+            <Button text="Populate Table" onAction="#populateTable"/>
+            <Button text="refresh Table" fx:id="refreshTableButton" onAction="#RefreshTable"/>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.bootstrapfx.scene.layout.Panel?>
+<?import javafx.scene.text.Text?>
+
+  <AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx" xmlns:bootstrapfx="http://javafx.com/javafx" fx:controller="com.example.oms3.controller.LoginController">
+    <Panel text="Login" styleClass="panel-primary" AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <VBox alignment="CENTER" spacing="20.0">
+
+
+          <TextField fx:id="usernameField" promptText="Username" maxWidth="200" styleClass="form-control"/>
+          <PasswordField fx:id="passwordField" promptText="Password" maxWidth="200" styleClass="form-control"/>
+
+          <HBox spacing="10">
+            <Button fx:id="loginButton" text="Login" onAction="#onLoginButtonClick" styleClass="btn-primary"/>
+            <Button text="Register" onAction="#onRegisterButtonClick" styleClass="btn-secondary"/>
+          </HBox>
+
+        </VBox>
+    </Panel>
+  </AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.oms3.controller.AddProductController"
+            prefHeight="400.0" prefWidth="600.0">
+    <ScrollPane fitToWidth="true" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <VBox spacing="10" fillWidth="true">
+            <Label text="Add Product"/>
+
+            <Label text="Product Name"/>
+            <TextField fx:id="productNameField" promptText="Product Name"/>
+
+            <Label text="Category ID"/>
+            <TextField fx:id="categoryIdField" promptText="Category ID"/>
+
+            <Label text="Brand ID"/>
+            <TextField fx:id="brandIdField" promptText="Brand ID"/>
+
+            <Label text="Supplier ID"/>
+            <TextField fx:id="supplierIdField" promptText="Supplier ID"/>
+
+            <Label text="Price"/>
+            <TextField fx:id="priceField" promptText="Price"/>
+
+            <Label text="Description"/>
+            <TextArea fx:id="descriptionArea" promptText="Description"/>
+
+            <Label text="Stock Quantity"/>
+            <TextField fx:id="stockField" promptText="Stock Quantity"/>
+
+            <Button fx:id="addBtn" text="Add Product" onAction="#handleAddProduct"/>
+            <Button fx:id="cancelBtn" text="Cancel" onAction="#handleCancel"/>
+        </VBox>
+    </ScrollPane>
+</AnchorPane>
+

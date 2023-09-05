@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.oms3.controller.DeleteProductController"
+            prefHeight="200.0" prefWidth="400.0">
+    <VBox spacing="10" fillWidth="true" AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20"
+          AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="Delete Product"/>
+
+        <Label text="Product ID"/>
+        <TextField fx:id="productIdField" promptText="Product ID"/>
+
+        <Button fx:id="deleteProductBtn" text="Delete Product" onAction="#handleDeleteProduct"/>
+        <Button fx:id="cancelBtn" text="Cancel" onAction="#handleCancel"/>
+
+        <Label text ="List of products IDs"/>
+        <TableView fx:id="productsTable" prefHeight="300.0" prefWidth="550.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="nameColumn" text="Name"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
+
